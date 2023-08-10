@@ -1,0 +1,20 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "python.formatting.provider": "none",
+    "files.associations": {
+        "*.px4board": "makefile",
+        "*.toml": "makefile",
+        "Kconfig": "makefile",
+        "*.map": "arm",
+        "*.dat": "cmake",
+        ".config": "cmake",
+        "*.inc": "cmake",
+        "*.sdf": "xml",
+        "*.parm": "cmake",
+        "version.h": "c",
+        "usbd_cdc_if.h": "c",
+        "bsp_can.h": "c"
+    }
+}
