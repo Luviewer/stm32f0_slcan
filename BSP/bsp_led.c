@@ -15,12 +15,19 @@ void led_init()
 {
     __HAL_RCC_GPIOB_CLK_ENABLE();
     GPIO_InitTypeDef GPIO_InitStruct;
-    GPIO_InitStruct.Pin       = GPIO_PIN_0 | GPIO_PIN_1;
+    GPIO_InitStruct.Pin       = GPIO_PIN_15;
     GPIO_InitStruct.Mode      = GPIO_MODE_OUTPUT_PP;
     GPIO_InitStruct.Pull      = GPIO_PULLUP;
     GPIO_InitStruct.Speed     = GPIO_SPEED_FREQ_MEDIUM;
     GPIO_InitStruct.Alternate = 0;
     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin       = GPIO_PIN_3;
+    GPIO_InitStruct.Mode      = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Pull      = GPIO_PULLUP;
+    GPIO_InitStruct.Speed     = GPIO_SPEED_FREQ_MEDIUM;
+    GPIO_InitStruct.Alternate = 0;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
     HAL_GPIO_WritePin(LED_GREEN, 1);
 }
